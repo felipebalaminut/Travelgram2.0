@@ -43,10 +43,14 @@ html {
   font-weight: var(--ff-sm);
   font-size: var(--ff-sm);
   line-height: 1.7;
+
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--background-color);
+
+  overflow-x: hidden;
 }
 
 h1 {
@@ -63,6 +67,16 @@ ul[role="list"] {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--brand-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 @media (width >= 80em) {

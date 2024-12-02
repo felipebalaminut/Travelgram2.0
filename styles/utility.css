@@ -23,6 +23,22 @@
   gap: 1rem;
 }
 
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-0\.5 {
+  gap: .5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 80rem;

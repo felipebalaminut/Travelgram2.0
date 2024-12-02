@@ -1,0 +1,78 @@
+header {
+  background-color: var(--surface-color);
+
+  &:has(.search-bar):focus-within {
+    & a.logo span {
+      display: none;
+      transition: 0.2s;
+    }
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & a.logo {
+    text-decoration: none;
+    & span {
+      color: var(--brand-color);
+      font: var(--fw-lg) var(--fs-md) / 1.6 var(--ff-poppins);
+    }
+  }
+
+  & nav {
+    & .search-bar {
+      border-radius: 0.75rem;
+      padding: 0.75rem 0.75rem;
+
+      & input[type="text"] {
+        background-color: transparent;
+        width: 0;
+        outline: 0;
+        border: 0;
+
+        transition: 0.4s;
+
+        font: var(--fw-base) var(--fs-sm) / 1.6 var(--ff-poppins);
+        color: var(--text-color-secondary);
+      }
+
+      &:focus-within input {
+        width: 195px;
+      }
+    }
+
+    & .search-bar:hover,
+    & .search-bar:focus-within {
+      background-color: rgb(242, 242, 242);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    & a {
+      color: var(--text-color-secondary);
+      & img.profile {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 80em) {
+    &:has(.search-bar:focus-within) {
+      & a.logo span {
+        display: inline;
+      }
+    }
+
+    & nav {
+      & .search-bar {
+        &:hover input,
+        &:focus-within input {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
