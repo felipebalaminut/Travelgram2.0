@@ -28,7 +28,6 @@
     }
 
     & .profile-list {
-
       & ul[role="list"] {
         display: grid;
         gap: 1rem;
@@ -53,11 +52,41 @@
         max-width: 38rem;
         flex-direction: row;
         gap: 2rem;
+
+        & img {
+          width: 11rem;
+          height: 11rem;
+        }
       }
     }
 
     & .profile-list {
       min-width: 17.5rem;
+    }
+  }
+}
+
+#photos {
+  & .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+    gap: 1.5rem;
+
+    & figure {
+      height: 328px;
+
+      & img {
+        width: 100%;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+
+  @media (width >= 80em) {
+    & .gallery {
+      & figure {
+        height: 286px;
+      }
     }
   }
 }
