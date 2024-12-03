@@ -39,6 +39,10 @@
   gap: 1rem;
 }
 
+.gap-2 {
+  gap: 2rem;
+}
+
 @media (width >= 80em) {
   .container {
     --max-width: 80rem;
