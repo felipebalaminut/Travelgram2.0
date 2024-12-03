@@ -65,8 +65,9 @@ header {
 
     & nav {
       & .search-bar {
+        &:hover input[type="text"],
         &:focus-within input[type="text"] {
-          width: 400px;
+          width: 300px;
         }
       }
     }
