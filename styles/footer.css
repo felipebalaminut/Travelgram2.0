@@ -1,0 +1,16 @@
+footer {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+
+  & p.brand {
+    color: var(--text-color-secondary);
+  }
+
+  & .links {
+    display: flex;
+    gap: 1rem;
+
+    color: var(--text-color-secondary);
+  }
+}

@@ -20,6 +20,8 @@
       & .profile-info h2 {
         font: var(--fw-lg) var(--fs-lg) / 1.25 var(--ff-poppins);
         color: var(--text-color-primary);
+
+        margin-bottom: .5rem;
       }
 
       & .profile-info p {
