@@ -1,13 +1,6 @@
 header {
   background-color: var(--surface-color);
 
-  &:has(.search-bar):focus-within {
-    & a.logo span {
-      display: none;
-      transition: 0.2s;
-    }
-  }
-
   & > div {
     display: flex;
     align-items: center;
@@ -19,6 +12,10 @@ header {
     & span {
       color: var(--brand-color);
       font: var(--fw-lg) var(--fs-md) / 1.6 var(--ff-poppins);
+    }
+
+    &:has(+ nav .search-bar:focus-within) span {
+      display: none;
     }
   }
 
@@ -39,7 +36,7 @@ header {
         color: var(--text-color-secondary);
       }
 
-      &:focus-within input {
+      &:focus-within input[type="text"] {
         width: 195px;
       }
     }
@@ -59,17 +56,16 @@ header {
     }
   }
 
-  @media (min-width: 80em) {
-    &:has(.search-bar:focus-within) {
-      & a.logo span {
+  @media (width >= 80em) {
+    & a.logo {
+      &:has(+ nav .search-bar:focus-within) span {
         display: inline;
       }
     }
 
     & nav {
       & .search-bar {
-        &:hover input,
-        &:focus-within input {
+        &:focus-within input[type="text"] {
           width: 400px;
         }
       }
