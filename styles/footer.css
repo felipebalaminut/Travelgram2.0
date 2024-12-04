@@ -13,4 +13,10 @@ footer {
 
     color: var(--text-color-secondary);
   }
+
+  @media (width >= 80em) {
+    & .links {
+      margin-left: auto;
+    }
+  }
 }
